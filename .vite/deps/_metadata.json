@@ -1,0 +1,52 @@
+{
+  "hash": "b8308fd2",
+  "configHash": "81778087",
+  "lockfileHash": "e3695707",
+  "browserHash": "5d86de92",
+  "optimized": {
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "1652e1f5",
+      "needsInterop": true
+    },
+    "react-router": {
+      "src": "../../node_modules/react-router/dist/development/index.mjs",
+      "file": "react-router.js",
+      "fileHash": "a49a3967",
+      "needsInterop": false
+    },
+    "react-router/dom": {
+      "src": "../../node_modules/react-router/dist/development/dom-export.mjs",
+      "file": "react-router_dom.js",
+      "fileHash": "b3e95a5c",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "eb047ab4",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "27f33fd0",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-2UH5WJXA-DRIyJulv": {
+      "file": "chunk-2UH5WJXA-DRIyJulv.js",
+      "isDynamicEntry": false
+    },
+    "react-BQupsjBO": {
+      "file": "react-BQupsjBO.js",
+      "isDynamicEntry": false
+    },
+    "react-dom-BacuyvIl": {
+      "file": "react-dom-BacuyvIl.js",
+      "isDynamicEntry": false
+    }
+  }
+}
