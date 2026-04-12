@@ -1,29 +1,44 @@
 import React from 'react';
+import { FaStar } from "react-icons/fa";
+import { Link } from 'react-router';
+
+
 
 const Book = ({book}) => {
-    return (
-        <div>
 
-            <div className="card bg-base-200  w-96 shadow-sm">
-  <figure     className= "w-full p-10 h-[500px]">
+  console.log(book.tags) ;
+    return (
+        <Link to={`/books/details/${book.bookId}`}>
+
+            <div className="card bg-base-200  w-96 shadow-sm hover:">
+  <figure     className= "w-full p-10">
     <img
       src={book.image}
-      alt="Shoes" />
+      alt="Shoes" 
+      className='h-[250px]'/>
   </figure>
+
   <div className="card-body">
+     <div className=' flex gap-4'>
+       {book.tags.map(element => (
+        <span className='bg-red-500/20 px-4 py-2 rounded-2xl'>{element}</span>
+       ))
+    }
+    </div>
+
     <h2 className="card-title">
       {book.bookName}
-      <div className="badge badge-error">NEW</div>
+      <div className="badge badge-error ">NEW</div>
     </h2>
     <p>By : {book.author}</p>
     <div className="card-actions justify-end">
-      <div className="badge badge-outline">{book.rating}*</div>
+      <div className="badge badge-error badge-outline">{book.rating}<FaStar className='text-yellow-400'></FaStar></div>
       <div className="badge badge-outline">{book.category}</div>
     </div>
   </div>
 </div>
             
-        </div>
+        </Link>
     );
 };
 
