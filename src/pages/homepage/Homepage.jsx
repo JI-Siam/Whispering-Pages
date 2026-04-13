@@ -8,7 +8,6 @@ const Homepage = () => {
         return (
         <div>
               <Hero></Hero>
-              <h1> Total books : {books.length}</h1>
               <Books books={books}></Books>
         </div>
     );

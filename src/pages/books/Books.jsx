@@ -3,6 +3,8 @@ import { BookContext } from '../../context/BookContext';
 import Book from '../../components/homepage/books/Book';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import ReadList from '../../components/shared/books/ReadList';
+import WishList from '../../components/shared/books/WishList' ;
 
 const Books = () => {
     const {storedBooks , wishlistBooks} = useContext(BookContext) ; 
@@ -17,15 +19,11 @@ const Books = () => {
             <Tab>Wish List</Tab>
             </TabList>
 
-            <TabPanel>      
-                <div className='grid grid=cols-3 gap-10 '>
-                        {storedBooks.map(book => <Book key={book.bookId} book={book}></Book>)}
-                </div>
+            <TabPanel> 
+                <ReadList readBooks={storedBooks}></ReadList>   
             </TabPanel>
             <TabPanel>
-                 <div className='grid grid=cols-3 gap-10 '>
-                        {wishlistBooks.map(book => <Book key={book.bookId} book={book}></Book>)}
-                </div>
+                    <WishList wishlistBooks={wishlistBooks}></WishList>
             </TabPanel>
         </Tabs>
 
