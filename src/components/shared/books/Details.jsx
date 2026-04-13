@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { FaStar } from 'react-icons/fa';
 import { useLoaderData, useParams } from 'react-router';
+import { BookContext } from '../../../context/BookContext';
 
 const Details = () => {
     const {id} = useParams() ; 
-    console.log(id) ;
     const books = useLoaderData() ; 
-    console.log(books) ;
-
     const selectedBook = books.find(book => book.bookId == id ); 
 
-    console.log(selectedBook) ;
+    const {handleMarkRead , handleWishlist}= useContext(BookContext) ;
+
+
 
     return (
         <div className='container mx-auto'>
@@ -18,11 +19,11 @@ const Details = () => {
                     <img
                     src={selectedBook.image}
                     alt=""
-                    className='h-[500px] w-80 p-10' />
+                    className='h-[500px] w-85 p-5' />
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title text-3xl ">{selectedBook.bookName}</h2>
-                    <p>Author By: {selectedBook.author}</p>
+                    <p className='italic'>{selectedBook.author}</p>
                            <div className="divider"></div>
                     <h2>{selectedBook.category}</h2>
                             <div className="divider"></div>
@@ -40,11 +41,16 @@ const Details = () => {
 
                                  <div className="divider"></div>
 
-                    <div>
-                        <h3>Rating : {selectedBook.rating}</h3>
-                        <h3>Number of Pages : {selectedBook.totalPages}</h3>
-                        <h3>Publisher : {selectedBook.publisher}</h3>
-                        <h3>Year of Publishing : {selectedBook.yearOfPublishing}</h3>
+                    <div className='grid grid-cols-2 font-semibold'>
+                        <h3>Rating : </h3> <h3>{selectedBook.rating}</h3>
+                        <h3>Number of Pages : </h3> <h3>{selectedBook.totalPages}</h3>
+                        <h3>Publisher : </h3> <h3>{selectedBook.publisher}</h3>
+                        <h3>Year of Publishing : </h3> <h3>{selectedBook.yearOfPublishing}</h3>
+                    </div>
+
+                    <div className="flex gap-5">
+                        <button className='btn ' onClick={()=> handleMarkRead({selectedBook})}>Mark as Read</button>
+                        <button className='btn btn-error btn-outline' onClick={()=> handleWishlist({selectedBook})}>Add to Wishlist</button>
                     </div>
                  
                 </div>

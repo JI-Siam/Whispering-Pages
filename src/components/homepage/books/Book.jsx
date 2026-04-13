@@ -8,7 +8,7 @@ const Book = ({book}) => {
 
   console.log(book.tags) ;
     return (
-        <Link to={`/books/details/${book.bookId}`}>
+        <Link to={`/details/${book.bookId}`}>
 
             <div className="card bg-base-200  w-96 shadow-sm hover:">
   <figure     className= "w-full p-10">
@@ -21,7 +21,7 @@ const Book = ({book}) => {
   <div className="card-body">
      <div className=' flex gap-4'>
        {book.tags.map(element => (
-        <span className='bg-red-500/20 px-4 py-2 rounded-2xl'>{element}</span>
+        <span className='bg-red-600/10 px-4 py-2 rounded-full'>{element}</span>
        ))
     }
     </div>
