@@ -13,7 +13,7 @@ const Details = () => {
 
 
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto p-10 mb-20'>
             <div className="card lg:card-side bg-base-100 shadow-sm sm:gap-20" >
                 <figure className='bg-base-200 min-w-5/12'>
                     <img

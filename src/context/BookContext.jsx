@@ -22,6 +22,11 @@ const BookProvider = ({children}) => {
                     toast.error(`The book ${selectedBook.bookName} is already marked`) ; 
                 }
                 else{
+
+                const isBookStoredInWishlist = wishlistBooks.find(book => book.bookId == selectedBook?.bookId) ; 
+                if(isBookStoredInWishlist) {
+                    setWishlistdBooks(wishlistBooks.filter(book => book.bookId != selectedBook.bookId)) ;
+                }
                     setStoredBooks([...storedBooks , selectedBook]) ; 
                     toast.success(`The book ${selectedBook.bookName} is marked as Read`) ; 
                 }
