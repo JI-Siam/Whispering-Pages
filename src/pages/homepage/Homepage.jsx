@@ -6,7 +6,7 @@ import { useLoaderData } from "react-router";
 const Homepage = () => {
     const books = useLoaderData() ;
         return (
-        <div>
+        <div className='space-y-12 lg:space-y-16'>
               <Hero></Hero>
               <Books books={books}></Books>
         </div>
