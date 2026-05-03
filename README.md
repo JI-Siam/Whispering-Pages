@@ -1,16 +1,58 @@
-# React + Vite
+# Whispering-Pages
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Beautiful, responsive React demos built with Vite and TailwindCSS.
 
-Currently, two official plugins are available:
+## Purpose
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Whispering-Pages showcases small, reusable UI patterns and interactive components built with React, TailwindCSS and component libraries. It's intended as a demo/playground for routing, tabbed interfaces, icons and toast notifications.
 
-## React Compiler
+## Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Demo: https://whisperingpages1.netlify.app/
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Key Features
+
+- Fast dev experience with Vite and React 19 (HMR)
+- Responsive UI using TailwindCSS and DaisyUI
+- Client-side routing with React Router
+- Accessible tabs via `react-tabs`
+- Iconography using `react-icons`
+- User notifications with `react-toastify`
+- Ready-to-use UI components from `@heroui/react`
+
+## Tech Stack
+
+- React 19
+- Vite
+- TailwindCSS (+ DaisyUI)
+- JavaScript (ESM)
+
+## NPM Packages Used
+
+Dependencies
+
+- `@tailwindcss/vite` — Tailwind integration for Vite
+- `react` — UI library
+- `react-dom` — React DOM renderer
+- `react-icons` — lightweight icon components
+- `react-router` — client-side routing
+- `react-tabs` — accessible tabs components
+- `react-toastify` — toast notifications
+- `tailwindcss` — utility-first styling
+
+DevDependencies
+
+- `vite` — development server and build tool
+- `@vitejs/plugin-react` — React plugin for Vite
+- `eslint`, `@eslint/js`, `eslint-plugin-react-hooks` — linting
+- `daisyui` — Tailwind component utilities
+
+
+## Usage
+
+Explore the routes, interact with tabs and trigger toasts to see patterns in action. The app is intentionally small and composable — use components as starting points for larger projects.
+
+
+
+
